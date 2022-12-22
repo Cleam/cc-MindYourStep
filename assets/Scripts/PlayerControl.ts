@@ -19,12 +19,23 @@ export class PlayerControl extends Component {
   private _deltaPos = new Vec3(0, 0, 0);
   // 角色目标位置
   private _targetPos = new Vec3();
+  // 记录跳了多少步
+  private _curMoveIndex = 0;
 
   @property({ type: Animation })
   public BodyAnim: Animation | null = null;
 
   start() {
-    input.on(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+    // init
+    // input.on(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+  }
+
+  setInputActive(active: boolean) {
+    if (active) {
+      input.on(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+    } else {
+      input.off(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+    }
   }
 
   update(deltaTime: number) {
@@ -34,6 +45,7 @@ export class PlayerControl extends Component {
         // end
         this.node.setPosition(this._targetPos);
         this._startJump = false;
+        this.onOnceJumpEnd();
       } else {
         // tween
         this.node.getPosition(this._curPos);
@@ -72,5 +84,15 @@ export class PlayerControl extends Component {
         this.BodyAnim.play('twoStep');
       }
     }
+
+    this._curMoveIndex += step;
+  }
+
+  onOnceJumpEnd() {
+    this.node.emit('JumpEnd', this._curMoveIndex);
+  }
+
+  reset() {
+    this._curMoveIndex = 0;
   }
 }
