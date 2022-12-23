@@ -1,8 +1,8 @@
 {
   "general": {
     "designResolution": {
-      "width": 1920,
-      "height": 1080,
+      "width": 960,
+      "height": 640,
       "fitHeight": false,
       "fitWidth": true
     },
