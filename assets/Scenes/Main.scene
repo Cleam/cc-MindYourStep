@@ -34,7 +34,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 58
+      "__id__": 60
     },
     "_id": "9a8f5efb-4be3-4652-93ed-aa40fec04b80"
   },
@@ -612,9 +612,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "BodyAnim": {
-      "__id__": 22
-    },
+    "CocosAnim": null,
     "_id": "aeindNh15Kk6qSItZ/FSFH"
   },
   {
@@ -859,7 +857,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 370.24154589371983,
+    "_orthoHeight": 771.5436241610738,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -1221,7 +1219,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 204.02,
+      "width": 120,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1250,7 +1248,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Mind Your Step",
+    "_string": "一步两步",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 30,
@@ -1326,7 +1324,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 291.22,
+      "width": 191.12,
       "height": 90.4
     },
     "_anchorPoint": {
@@ -1355,7 +1353,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Mouse Left click: jump one step\nMouse Right click: jump two step",
+    "_string": "鼠标左键点击：跳1步\n鼠标右键点击：跳2步",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 20,
@@ -1513,7 +1511,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Play",
+    "_string": "开始游戏",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 20,
@@ -1706,6 +1704,11 @@
   {
     "__type__": "cc.PrefabInfo",
     "fileId": "9a8f5efb-4be3-4652-93ed-aa40fec04b80",
+    "targetOverrides": [
+      {
+        "__id__": 58
+      }
+    ],
     "nestedPrefabInstanceRoots": [
       {
         "__id__": 7
@@ -1713,21 +1716,43 @@
     ]
   },
   {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 25
+    },
+    "sourceInfo": null,
+    "propertyPath": [
+      "CocosAnim"
+    ],
+    "target": {
+      "__id__": 7
+    },
+    "targetInfo": {
+      "__id__": 59
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "09cn05iw1NR7cjsZM2tLUI"
+    ]
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 59
-    },
-    "shadows": {
-      "__id__": 60
-    },
-    "_skybox": {
       "__id__": 61
     },
-    "fog": {
+    "shadows": {
       "__id__": 62
     },
-    "octree": {
+    "_skybox": {
       "__id__": 63
+    },
+    "fog": {
+      "__id__": 64
+    },
+    "octree": {
+      "__id__": 65
     }
   },
   {
